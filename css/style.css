@@ -1,0 +1,8 @@
+[v-cloak]{
+    display: none;
+}
+#imagen-producto{
+    width: 72px;
+    border-radius:150px;
+    border:5px solid #666;
+}

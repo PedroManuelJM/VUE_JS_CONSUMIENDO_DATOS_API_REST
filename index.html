@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+     <link href="css/style.css" rel="stylesheet"></link>
+     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <title>vUE JS</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span class="badge bg-info" style="font-size: 24px;margin-top: 5px;margin-bottom: 5px;"> Consumiendo datos de una API en VUE JS</span>
+        </div>
+        
+    </header>
+    
+
+     <section id="app">
+         <div class="container">
+             <table class="table table-striped table-border">
+                 <thead class="table-dark">
+                     <th>ID</th>
+                     <th class="md-1"></th>
+                     <th>Producto</th>
+                     <th>Marca</th>
+                     <th>Precio</th> 
+                    </thead>
+                 <tbody v-cloak class="">
+                     <tr v-for="(producto,index) in productos">
+                          <td>{{index+1}}</td>     
+                          <td> <img id="imagen-producto"v-bind:src="'https://pedrojm.000webhostapp.com/productos/'+ producto.imagenproducto"
+                            alt=""></td>  
+                          <td class="float-left">{{producto.nombreproducto}} , {{producto.caracteristica}}</td>    
+                          <td>{{producto.descripcion_marca}}</td>
+                          <td><span class="badge bg-success"> S/. {{producto.precio}} </span></td>
+                          
+                     </tr>
+                   
+                 </tbody>
+             </table>
+           
+         </div>
+
+     </section>
+
+   <!-- Option 1: Bootstrap Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+   <!--IMPORTANDO AXIOS-->
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   <script src="js/script.js"></script>
+
+
+
+</body>
+</html>
